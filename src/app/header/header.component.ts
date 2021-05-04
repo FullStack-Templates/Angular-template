@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthService } from '../auth/auth-service.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public isAuthenticated = false;
+  
+  /**
+   * 
+   * @param authService 
+   * @param router 
+   */
+  constructor(private authService: AuthService,private router: Router,) { 
+    this.authService.authenticationEventObservable.subscribe((event) => {
+      this.isAuthenticated = event;
+    });
+  }
+  
+  /**
+   *
+   */
+  ngOnInit() { 
+  }
+  
 
-  ngOnInit(): void {
+  /**
+   *
+   */
+  public login() {
+    this.authService.login();
+  }
+
+  /**
+   *
+   */
+  public logout() {
+    this.authService.logout();
+    this.isAuthenticated = this.authService.isAuthenticated();
+    this.router.navigateByUrl('landing');
   }
 
 }

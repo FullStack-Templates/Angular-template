@@ -39,13 +39,13 @@
         <button class="btn btn-secondary" type="submit">Search</button>
       </form>
       <ul class="navbar-nav mr-2">
-        <li class="nav-item">
-          <a class='nav-link no-caret' style="cursor:pointer">
+        <li class="nav-item" *ngIf="!isAuthenticated">
+          <a class='nav-link no-caret' style="cursor:pointer" (click)="login()">
             <span class="nav-link-inner--text">Login</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class='nav-link no-caret' style="cursor:pointer">
+        <li class="nav-item" *ngIf="isAuthenticated">
+          <a class='nav-link no-caret' style="cursor:pointer" (click)="logout()">
             <span class="nav-link-inner--text">Logout</span>
           </a>
         </li>
