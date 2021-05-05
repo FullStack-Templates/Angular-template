@@ -31,7 +31,7 @@ export class AuthService {
    */
   public isAuthenticated(): boolean {
     if (
-      this.oauthService.hasValidAccessToken &&
+      this.oauthService.hasValidAccessToken() &&
       this.oauthService.hasValidIdToken()
     ) {
       return true;
