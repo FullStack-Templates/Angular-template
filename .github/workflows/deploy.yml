@@ -1,4 +1,4 @@
-name: 'DeployAngular'
+name: 'Deployments'
 
 on:
   pull_request:
