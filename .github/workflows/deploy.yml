@@ -35,5 +35,5 @@ jobs:
         aws-region: us-east-1 
     - run: |
         pwd
-        aws s3 mb s3://${{ github.event.repository.name }}
+        #aws s3 mb s3://${{ github.event.repository.name }}
         aws s3 ls notes-app-uploads-cloudxpert
