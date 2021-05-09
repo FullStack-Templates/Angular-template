@@ -1,4 +1,5 @@
-## Angular OIDC Connect With Auth0 Template [![Build](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml/badge.svg)](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml) [![DeployAngular](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml) [![Netlify Status](https://api.netlify.com/api/v1/badges/52a905ed-204f-418c-a913-24453ee2bd83/deploy-status)](https://app.netlify.com/sites/my-angular-template/deploys)
+## Angular OIDC Connect With Auth0 Template 
+[![Build](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml/badge.svg)](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml) [![DeployAngular](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml) [![Netlify Status](https://api.netlify.com/api/v1/badges/52a905ed-204f-418c-a913-24453ee2bd83/deploy-status)](https://app.netlify.com/sites/my-angular-template/deploys)
 
 ## Tech Stack  ![service aws-lambda](https://img.shields.io/badge/-Angular-green?style=social&logo=Angular)  ![service aws-lambda](https://img.shields.io/badge/-Typescript-green?style=social&logo=TypeScript) ![service aws-lambda](https://img.shields.io/badge/-aws-green?style=social&logo=Amazon+AWS)  ![service aws-lambda](https://img.shields.io/badge/-GithubActions-green?style=social&logo=GitHub+Actions)  ![service aws-lambda](https://img.shields.io/badge/-Auth0-green?style=social&logo=Auth0) ![service aws-lambda](https://img.shields.io/badge/-OpenIDConnect-green?style=social&logo=OpenID) 
 
@@ -16,7 +17,10 @@ The tech stack used are:
 
 ## Project Documentation:
 - Detailed documenation is available [here](https://www.todaystechnology.org/post/part-1-a-responsive-angular-app-with-openid-connect)
-- Live preview available [here](https://fullstack-templates.github.io/Angular-template)
+- Live preview available at: 
+   - [GitHub Pages](https://fullstack-templates.github.io/Angular-template)
+   - [S3 static website](http://my-angular-template.s3-website-us-east-1.amazonaws.com)
+   - [Netify](https://my-angular-template.netlify.app)
 
 Landing Page           |  Auth0 Login |  Home Page
 :-------------------------:|:-------------------------:|:-------------------------:
