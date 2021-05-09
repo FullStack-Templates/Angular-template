@@ -37,7 +37,7 @@ foo@bar:~$: npm install
 foo@bar:~$: npm run build
 ```
 
-## Run this application
+## Run the application
 To run this application for the first time, run the following in your shell:
 
 ```console
@@ -45,6 +45,10 @@ foo@bar:~$: npm run start
 ```
 
 Open up the browser to http://127.0.0.1:4200 to view the application
+
+## Deploy the application
+
+Deployment recommendations for this application are available [here](https://github.com/FullStack-Templates/Angular-template/wiki)
 
 
 

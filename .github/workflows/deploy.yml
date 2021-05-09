@@ -25,7 +25,7 @@ jobs:
       with:
        node-version: ${{matrix.node-version}}
     - run: |
-        npm run build
+        npm run build-prod
     
     - name: Configure AWS credentials from Test account
       uses:  aws-actions/configure-aws-credentials@v1
@@ -34,6 +34,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1 
     - run: |
-        pwd
         #aws s3 mb s3://${{ github.event.repository.name }}
-        aws s3 ls notes-app-uploads-cloudxpert
+        aws s3 ls my-angular-template
+        aws s3 sync docs s3://my-angular-template
+        aws s3 ls my-angular-template
