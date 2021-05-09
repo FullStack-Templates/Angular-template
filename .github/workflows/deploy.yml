@@ -36,5 +36,7 @@ jobs:
     - run: |
         #aws s3 mb s3://${{ github.event.repository.name }}
         aws s3 ls my-angular-template
+        aws s3 website s3://my-angular-template/ --index-document index.html --error-document index.html
+        aws s3api put-bucket-policy --bucket=my-angular-template --policy file://.github/workflows/policy.json
         aws s3 sync docs s3://my-angular-template
         aws s3 ls my-angular-template
