@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-oidc-app": {
+    "Angular-template": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,12 +11,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "./custom-webpack.config.js"
-            },
-            "outputPath": "docs",
+            "outputPath": "dist/Angular-template",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,20 +64,20 @@
           }
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-oidc-app:build"
+            "browserTarget": "Angular-template:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-oidc-app:build:production"
+              "browserTarget": "Angular-template:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-oidc-app:build"
+            "browserTarget": "Angular-template:build"
           }
         },
         "test": {
@@ -117,15 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-oidc-app:serve"
+            "devServerTarget": "Angular-template:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-oidc-app:serve:production"
+              "devServerTarget": "Angular-template:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "angular-oidc-app"
+    }
+  },
+  "defaultProject": "Angular-template"
 }
