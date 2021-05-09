@@ -19,14 +19,14 @@ The tech stack used are:
 
 Landing Page           |  Auth0 Login |  Home Page
 :-------------------------:|:-------------------------:|:-------------------------:
-![](./documentation/images/Angular-test-login.png)  |  ![](./documentation/images/Auth0-login.png) | ![](./documentation/images/Angular-test-after-login.png)
+![](./docs/assets/images/Angular-test-login.png)  |  ![](./docs/assets/images/Auth0-login.png) | ![](./docs/assets/images/Angular-test-after-login.png)
 ## Project Dependencies
 
 To build and run this project, you'll need the following tools.
 
 * Node.js - [Install Node.js 12x+](https://nodejs.org/en/), including the NPM package management tool.
 * Angular CLI - [Install the Angular CLI](https://angular.io/cli)
-* AWS CLI - [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
+* AWS CLI (optional) - [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
 
 ## Build the Application
 To build your application for the first time, run the following in your shell:
