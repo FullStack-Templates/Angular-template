@@ -16,6 +16,7 @@ The tech stack used are:
 
 ## Project Documentation:
 - Detailed documenation is available [here](https://www.todaystechnology.org/post/part-1-a-responsive-angular-app-with-openid-connect)
+- Live preview available [here](https://fullstack-templates.github.io/Angular-template)
 
 Landing Page           |  Auth0 Login |  Home Page
 :-------------------------:|:-------------------------:|:-------------------------:
