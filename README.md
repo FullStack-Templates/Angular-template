@@ -14,10 +14,17 @@ The tech stack used are:
 - AWS S3 for hosting the application
 - GitHub Actions as the CI/CD tool
 
+## Project Documentation:
+- Detailed documenation is available [here](https://www.todaystechnology.org/post/part-1-a-responsive-angular-app-with-openid-connect)
+
+Landing Page           |  Auth0 Login |  Home Page
+:-------------------------:|:-------------------------:|:-------------------------:
+![](./documentation/images/Angular-test-login.png)  |  ![](./documentation/images/Auth0-login.png) | ![](./documentation/images/Angular-test-after-login.png)
 ## Project Dependencies
 
 To build and run this project, you'll need the following tools.
 
+* Node.js - [Install Node.js 12x+](https://nodejs.org/en/), including the NPM package management tool.
 * Angular CLI - [Install the Angular CLI](https://angular.io/cli)
 * AWS CLI - [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
 
