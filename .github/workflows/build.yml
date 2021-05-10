@@ -2,7 +2,7 @@ name: 'Builds'
 
 on:
   push:
-    branches: [ feature/**, review/** ]
+    branches: [ feature/**, review/**,master ]
 
 jobs:
   test:
