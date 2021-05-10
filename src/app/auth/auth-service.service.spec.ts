@@ -3,10 +3,8 @@ import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { OAuthService } from 'angular-oauth2-oidc';
-import { Subject } from 'rxjs';
-jest.mock('angular-oauth2-oidc');
-
 import { AuthService } from './auth-service.service';
+jest.mock('angular-oauth2-oidc');
 
 describe('AuthServiceService', () => {
   let service: AuthService;

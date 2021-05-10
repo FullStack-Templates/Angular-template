@@ -6,21 +6,15 @@ import { AuthGuard } from './auth-guard.guard';
 import { AuthService } from './auth-service.service';
 import { Router } from '@angular/router';
 import { OAuthService } from 'angular-oauth2-oidc';
-import { Subject } from 'rxjs';
-import { AppModule } from '../app.module';
+import { Observable, Subject } from 'rxjs';
 
-describe('CanDeactivateGuardService', () => {
+jest.mock('./auth-service.service');
+
+describe('CanActivateGuardService', () => {
   let homeComponent: HomeComponent;
   let authGuard: AuthGuard;
   let oauthService: OAuthService;
-  let authService:  {
-    isAuthenticated: () => true,
-    login: ()  => {},
-    logout: () => {},
-    authenticationEventObservable: Subject<boolean> ,
-    oauthService: OAuthService,
-    router: Router
-  };
+  let authService = new AuthService(null, null);
 
   beforeEach(async() => {
     TestBed.configureTestingModule({
@@ -40,8 +34,29 @@ describe('CanDeactivateGuardService', () => {
 
   it('expect authguard to instantiate', () => {
     expect(authGuard).toBeTruthy();
-    //authGuard.canActivate()
   });
 
-  // more tests
+  it('expect authguard can activate to be true',  done => {
+    const yes = true;
+    jest.spyOn(authService, "isAuthenticated").mockImplementation(() => { return yes});
+    let canActivate:Observable<boolean> =  authGuard.canActivate(null, null) as Observable<boolean>;
+     canActivate.subscribe((canActivateValue:boolean) => {
+       expect(canActivateValue).toBe(yes);
+       done();
+    });
+  });
+
+  it('expect authguard can activate to be false', done  => {
+    const no = false;
+    jest.spyOn(authService, "isAuthenticated").mockImplementation(() => { return no });
+    authService.authenticationEventObservable = new Subject<boolean>();
+
+    let canActivate:Observable<boolean> =   authGuard.canActivate(null, null) as Observable<boolean>;
+      canActivate.subscribe((canActivateValue:boolean) => {
+        expect(canActivateValue).toBe(no);
+        done();
+      });
+    authService.authenticationEventObservable.next(no);
+  });
+
 });
