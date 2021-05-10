@@ -16,6 +16,13 @@
     "lib": [
       "es2018",
       "dom"
+    ],
+    "types": [
+      "reflect-metadata",
+      "jest"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
     ]
   }
 }
