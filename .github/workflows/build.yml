@@ -37,10 +37,10 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
     
-    -name: CodeCov Action
-     uses: codecov/codecov-action@v1
-     with:
-      token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+    - name: CodeCov Action
+      uses: codecov/codecov-action@v1
+      with:
+       token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
 
   build:
     needs: test
