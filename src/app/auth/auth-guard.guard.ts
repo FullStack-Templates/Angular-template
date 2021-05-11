@@ -1,31 +1,41 @@
-import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
-import { AuthService } from './auth-service.service';
+import {Injectable} from '@angular/core';
+import {
+  ActivatedRouteSnapshot,
+  CanActivate,
+  Router,
+  RouterStateSnapshot,
+  UrlTree,
+} from '@angular/router';
+import {Observable} from 'rxjs';
+import {AuthService} from './auth-service.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
   /**
-   * 
-   * @param router 
-   * @param authService 
+   *
+   * @param router
+   * @param authService
    */
-  constructor(private router: Router, private authService: AuthService) { }
-  
+  constructor(private router: Router, private authService: AuthService) {}
+
   /**
-   * 
-   * @param route 
-   * @param state 
+   *
+   * @param route
+   * @param state
    */
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    state: RouterStateSnapshot
+  ):
+    | Observable<boolean | UrlTree>
+    | Promise<boolean | UrlTree>
+    | boolean
+    | UrlTree {
     if (this.authService.isAuthenticated()) {
-      let activated: Observable<boolean> = new Observable<boolean>(
-        
-        (subscriber) => {
+      const activated: Observable<boolean> = new Observable<boolean>(
+        subscriber => {
           subscriber.next(true);
         }
       );
@@ -36,5 +46,4 @@ export class AuthGuard implements CanActivate {
       return this.authService.authenticationEventObservable;
     }
   }
-  
 }

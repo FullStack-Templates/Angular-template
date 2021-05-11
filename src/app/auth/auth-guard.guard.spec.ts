@@ -1,34 +1,30 @@
-
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { HomeComponent } from '../home/home.component';
-import { AuthGuard } from './auth-guard.guard';
-import { AuthService } from './auth-service.service';
-import { Router } from '@angular/router';
-import { OAuthService } from 'angular-oauth2-oidc';
-import { Observable, Subject } from 'rxjs';
+import {TestBed} from '@angular/core/testing';
+import {RouterTestingModule} from '@angular/router/testing';
+import {HomeComponent} from '../home/home.component';
+import {AuthGuard} from './auth-guard.guard';
+import {AuthService} from './auth-service.service';
+import {Router} from '@angular/router';
+import {Observable, Subject} from 'rxjs';
 
 jest.mock('./auth-service.service');
 
 describe('CanActivateGuardService', () => {
-  let homeComponent: HomeComponent;
   let authGuard: AuthGuard;
-  let oauthService: OAuthService;
-  let authService = new AuthService(null, null);
+  const authService = new AuthService(null, null);
 
-  beforeEach(async() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule.withRoutes([])
-      ],
+      imports: [RouterTestingModule.withRoutes([])],
       declarations: [HomeComponent],
-      providers: [{
-        provide: AuthService,
-        useValue: {}
-      }]
+      providers: [
+        {
+          provide: AuthService,
+          useValue: {},
+        },
+      ],
     }).compileComponents();
-    TestBed.overrideProvider(AuthService, { useValue: authService });
-    let router = TestBed.get(Router);
+    TestBed.overrideProvider(AuthService, {useValue: authService});
+    const router = TestBed.get(Router);
     authGuard = new AuthGuard(router, TestBed.get(AuthService));
   });
 
@@ -36,27 +32,36 @@ describe('CanActivateGuardService', () => {
     expect(authGuard).toBeTruthy();
   });
 
-  it('expect authguard can activate to be true',  done => {
+  it('expect authguard can activate to be true', done => {
     const yes = true;
-    jest.spyOn(authService, "isAuthenticated").mockImplementation(() => { return yes});
-    let canActivate:Observable<boolean> =  authGuard.canActivate(null, null) as Observable<boolean>;
-     canActivate.subscribe((canActivateValue:boolean) => {
-       expect(canActivateValue).toBe(yes);
-       done();
+    jest.spyOn(authService, 'isAuthenticated').mockImplementation(() => {
+      return yes;
+    });
+    const canActivate: Observable<boolean> = authGuard.canActivate(
+      null,
+      null
+    ) as Observable<boolean>;
+    canActivate.subscribe((canActivateValue: boolean) => {
+      expect(canActivateValue).toBe(yes);
+      done();
     });
   });
 
-  it('expect authguard can activate to be false', done  => {
+  it('expect authguard can activate to be false', done => {
     const no = false;
-    jest.spyOn(authService, "isAuthenticated").mockImplementation(() => { return no });
+    jest.spyOn(authService, 'isAuthenticated').mockImplementation(() => {
+      return no;
+    });
     authService.authenticationEventObservable = new Subject<boolean>();
 
-    let canActivate:Observable<boolean> =   authGuard.canActivate(null, null) as Observable<boolean>;
-      canActivate.subscribe((canActivateValue:boolean) => {
-        expect(canActivateValue).toBe(no);
-        done();
-      });
+    const canActivate: Observable<boolean> = authGuard.canActivate(
+      null,
+      null
+    ) as Observable<boolean>;
+    canActivate.subscribe((canActivateValue: boolean) => {
+      expect(canActivateValue).toBe(no);
+      done();
+    });
     authService.authenticationEventObservable.next(no);
   });
-
 });

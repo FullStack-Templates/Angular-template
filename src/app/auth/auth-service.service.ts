@@ -1,14 +1,15 @@
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { OAuthService } from 'angular-oauth2-oidc';
-import { AuthCodeFlowConfig } from './auth.config';
-import { Subject } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {Router} from '@angular/router';
+import {OAuthService} from 'angular-oauth2-oidc';
+import {AuthCodeFlowConfig} from './auth.config';
+import {Subject} from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-  public authenticationEventObservable: Subject<boolean> = new Subject<boolean>();
+  public authenticationEventObservable: Subject<boolean> =
+    new Subject<boolean>();
 
   /**
    *
@@ -19,13 +20,13 @@ export class AuthService {
     this.oauthService.configure(AuthCodeFlowConfig);
   }
 
- /**
+  /**
    *
    */
   public logout() {
     this.oauthService.logOut();
   }
-  
+
   /**
    *
    */
@@ -52,7 +53,8 @@ export class AuthService {
         this.authenticationEventObservable.next(result);
         //this.router.navigateByUrl('home');
       })
-      .catch((error) => {
+      .catch(error => {
+        console.error('Authentication error: ' + error);
         this.logout();
       });
 

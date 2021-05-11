@@ -4,13 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "eslint . --ext .ts --fix && ng build",
     "build-prod-s3": "ncp src/environments/environment-s3.ts src/environments/environment.prod.ts && ng build --prod --output-path docs && ncp docs/index.html docs/error.html",
     "build-prod-netify": "ncp src/environments/environment-netify.ts src/environments/environment.prod.ts && ng build --prod --output-path docs && ncp docs/index.html docs/error.html",
     "build-prod-github-pages": "ncp src/environments/environment-github-pages.ts src/environments/environment.prod.ts && ng build --prod --output-path docs --base-href /Angular-template/ && ncp docs/index.html docs/404.html",
-    "test": "jest --collect-coverage",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "test": "eslint . --ext .ts --fix && jest --collect-coverage",
+    "e2e": "ng e2e",
+    "compile": "tsc",
+    "fix": "eslint --fix"
   },
   "private": true,
   "dependencies": {
@@ -31,12 +32,13 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1001.3",
+    "eslint": "^7.26.0",
     "@angular/cli": "~10.1.3",
     "@angular/compiler-cli": "~10.1.3",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/jest": "^26.0.23",
-    "@types/node": "^12.11.1",
+    "@types/node": "^14.11.2",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -52,6 +54,7 @@
     "ts-jest": "^26.5.6",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "^4.0.3",
+    "gts": "^3.1.0"
   }
 }

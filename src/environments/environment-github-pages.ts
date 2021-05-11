@@ -8,6 +8,7 @@ export const environment = {
     response_type: 'id_token token',
     logoutUrl:
       'https://dev-r1e4o7ny.us.auth0.com/v2/logout?federated&returnTo=https://fullstack-templates.github.io/Angular-template/landing&client_id=uBqZpyhO9dqVa1gBSPeysuzmKNPChgTq',
-    postLogoutRedirectUri: 'https://fullstack-templates.github.io/Angular-template/landing',
+    postLogoutRedirectUri:
+      'https://fullstack-templates.github.io/Angular-template/landing',
   },
 };
