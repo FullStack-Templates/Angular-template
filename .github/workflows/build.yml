@@ -1,74 +1,26 @@
-name: 'Builds'
+name: "Dependabot Automerge - Action"
 
 on:
-  push:
-    branches: [ feature/**, review/**,master ]
-
+  pull_request:
+  
 jobs:
-  test:
+  worker:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [13.x]
-
+    if: github.actor == 'dependabot[bot]'
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Cache Node modules
-      id: node-Cache
-      uses: actions/cache@v2
-      with:
-        path: |
-          **/node_modules
-        key: node-modules-${{ hashFiles('package-lock.json') }}
-
-
-    - name: Use Node.js ${{matrix.node-version}}
-      uses: actions/setup-node@v1
-      with:
-       node-version: ${{matrix.node-version}}
-    - run: |
-        npm install
-        npm run test
-    
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: CodeCov Action
-      uses: codecov/codecov-action@v1
-      with:
-       token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-
-  build:
-    needs: test
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [13.x]
-
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Cache Node modules
-      id: node-Cache
-      uses: actions/cache@v2
-      with:
-        path: |
-          **/node_modules
-        key: node-modules-${{ hashFiles('package-lock.json') }}
-
-    - name: Install Dependencies
-      if: steps.node-cache.outputs.cache-hit != 'true'
-      run: |
-        npm install
-        
-    - name: Use Node.js ${{matrix.node-version}}
-      uses: actions/setup-node@v1
-      with:
-       node-version: ${{matrix.node-version}}
-    - run: |
-        npm run build
+      - name: automerge
+        uses: actions/github-script@0.2.0
+        with:
+          script: |
+            github.pullRequests.createReview({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              pull_number: context.payload.pull_request.number,
+              event: 'APPROVE'
+            })
+            github.pullRequests.merge({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              pull_number: context.payload.pull_request.number
+            })
+          github-token: ${{github.token}}
