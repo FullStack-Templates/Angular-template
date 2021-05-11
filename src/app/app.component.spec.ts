@@ -1,44 +1,38 @@
-import { Component } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import {Component} from '@angular/core';
+import {TestBed} from '@angular/core/testing';
+import {RouterTestingModule} from '@angular/router/testing';
+import {AppComponent} from './app.component';
 
 @Component({
   selector: 'app-footer',
-  template: ''
+  template: '',
 })
-class MockFooterComponent {
-}
+class MockFooterComponent {}
 @Component({
   selector: 'app-header',
-  template: ''
+  template: '',
 })
-class MockHeaderComponent {
-}
+class MockHeaderComponent {}
 @Component({
   selector: 'app-home',
-  template: ''
+  template: '',
 })
-class MockHomeComponent {
-}
+class MockHomeComponent {}
 @Component({
   selector: 'app-landing',
-  template: ''
+  template: '',
 })
-class MockLandingComponent {
-}
+class MockLandingComponent {}
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
+      imports: [RouterTestingModule],
       declarations: [
         AppComponent,
         MockFooterComponent,
         MockHeaderComponent,
         MockHomeComponent,
-        MockLandingComponent
+        MockLandingComponent,
       ],
     }).compileComponents();
   });
@@ -49,7 +43,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-oidc-app'`, () => {
+  it("should have as title 'angular-oidc-app'", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('angular-oidc-app');
