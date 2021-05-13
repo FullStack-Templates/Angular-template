@@ -53,16 +53,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Cache Node modules
-      id: node-Cache
-      uses: actions/cache@v2
-      with:
-        path: |
-          **/node_modules
-        key: node-modules-${{ hashFiles('package-lock.json') }}
+    #- name: Cache Node modules
+    #  id: node-Cache
+    #  uses: actions/cache@v2
+    #  with:
+    #    path: |
+    #      **/node_modules
+    #    key: node-modules-${{ hashFiles('package-lock.json') }}
 
     - name: Install Dependencies
-      if: steps.node-cache.outputs.cache-hit != 'true'
+      #if: steps.node-cache.outputs.cache-hit != 'true'
       run: |
         npm install
         
@@ -73,7 +73,7 @@ jobs:
         start: npm start
         project: ./e2e
         record: true
-        cache-key: node-modules-${{ hashFiles('package-lock.json') }}
+        #cache-key: node-modules-${{ hashFiles('package-lock.json') }}
       env:
           # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
