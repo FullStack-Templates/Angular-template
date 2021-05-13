@@ -13,7 +13,6 @@ jobs:
       with:
         github-token: "${{ secrets.DEPENDABOT_TOKEN }}"
 
-jobs:
   auto-merge:
     needs: dependabot-approval
     runs-on: ubuntu-latest
