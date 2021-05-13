@@ -1,6 +1,6 @@
 describe('My First Test', () => {
   it('Visits the Landing Page', () => {
-    cy.visit('/landing');
+    cy.visit('/');
     cy.contains('Angular');
     cy.location('href').should('contain', 'landing');
   });

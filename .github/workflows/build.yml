@@ -73,6 +73,8 @@ jobs:
         start: npm start
         project: ./e2e
         record: true
+        wait-on: 'http://localhost:4200'
+        wait-on-timeout: 240
         #cache-key: node-modules-${{ hashFiles('package-lock.json') }}
       env:
           # pass the Dashboard record key as an environment variable
