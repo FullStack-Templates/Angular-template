@@ -1,14 +1,23 @@
 name: "Dependabot"
 
 on:
-  pull_request_target:
+  pull_request:
   
 jobs:
-  dependabot-merge:
+  dependabot-approval:
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     steps:
     - uses: hmarr/auto-approve-action@v2
       if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
       with:
-        github-token: "${{ secrets.GITHUB_TOKEN }}"
+        github-token: "${{ secrets.DEPENDABOT_TOKEN }}"
+
+jobs:
+  auto-merge:
+    needs: dependabot-approval
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          github-token: "${{ secrets.DEPENDABOT_TOKEN }}"

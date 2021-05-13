@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [13.x]
+        node-version: [14.15]
 
     steps:
     - uses: actions/checkout@v2
@@ -48,7 +48,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [13.x]
+         node-version: [14.15]
 
     steps:
     - uses: actions/checkout@v2
@@ -62,17 +62,20 @@ jobs:
         key: node-modules-${{ hashFiles('package-lock.json') }}
 
     - name: Install Dependencies
-      if: steps.node-cache.outputs.cache-hit != 'true'
+      #if: steps.node-cache.outputs.cache-hit != 'true'
       run: |
         npm install
         
     - name: Cypress run
       uses: cypress-io/github-action@v2
       with:
-        build: npm run build
+        #build: npm run build
         start: npm start
         project: ./e2e
         record: true
+        wait-on: 'http://localhost:4200'
+        wait-on-timeout: 240
+        #cache-key: node-modules-${{ hashFiles('package-lock.json') }}
       env:
           # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
