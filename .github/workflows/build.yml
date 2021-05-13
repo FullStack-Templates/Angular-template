@@ -71,3 +71,4 @@ jobs:
       with:
         build: npm run build
         start: npm start
+        working-directory: e2e
