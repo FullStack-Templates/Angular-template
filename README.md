@@ -1,5 +1,5 @@
 ## Angular OIDC Connect With Auth0 Template 
-[![Build](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml/badge.svg)](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/FullStack-Templates/Angular-template/branch/master/graph/badge.svg?token=VG4HFY1PJW)](https://codecov.io/gh/FullStack-Templates/Angular-template) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/38bb383c244749dab8aebf3601c52e3d)](https://www.codacy.com/gh/FullStack-Templates/Angular-template/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=FullStack-Templates/Angular-template&amp;utm_campaign=Badge_Grade) [![DeployAngular](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml) [![Netlify Status](https://api.netlify.com/api/v1/badges/52a905ed-204f-418c-a913-24453ee2bd83/deploy-status)](https://app.netlify.com/sites/my-angular-template/deploys)
+[![Build](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml/badge.svg)](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml) [![Cypress Dashboard](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/tbbs2j/master&logo=cypress)](https://dashboard.cypress.io/projects/tbbs2j/runs) [![codecov](https://codecov.io/gh/FullStack-Templates/Angular-template/branch/master/graph/badge.svg?token=VG4HFY1PJW)](https://codecov.io/gh/FullStack-Templates/Angular-template) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/38bb383c244749dab8aebf3601c52e3d)](https://www.codacy.com/gh/FullStack-Templates/Angular-template/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=FullStack-Templates/Angular-template&amp;utm_campaign=Badge_Grade) [![DeployAngular](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml) [![Netlify Status](https://api.netlify.com/api/v1/badges/52a905ed-204f-418c-a913-24453ee2bd83/deploy-status)](https://app.netlify.com/sites/my-angular-template/deploys)
 
 ## Tech Stack  ![service aws-lambda](https://img.shields.io/badge/-Angular-green?style=social&logo=Angular)  ![service aws-lambda](https://img.shields.io/badge/-Typescript-green?style=social&logo=TypeScript) ![service aws-lambda](https://img.shields.io/badge/-aws-green?style=social&logo=Amazon+AWS)  ![service aws-lambda](https://img.shields.io/badge/-GithubActions-green?style=social&logo=GitHub+Actions)  ![service aws-lambda](https://img.shields.io/badge/-Auth0-green?style=social&logo=Auth0) ![service aws-lambda](https://img.shields.io/badge/-OpenIDConnect-green?style=social&logo=OpenID) 
 
@@ -14,6 +14,12 @@ The tech stack used are:
 - Auth0 as the OpenID compliant Identity Provider
 - AWS S3 for hosting the application
 - GitHub Actions as the CI/CD tool
+
+## CI/CD and metrics:
+- [GitHub Actions](https://github.com/FullStack-Templates/Angular-template/actions) for continuous integration and delivery to S3
+- [Cypress](https://dashboard.cypress.io/projects/tbbs2j/analytics/runs-over-time) for e2e tests
+- [Coveralls](https://app.codecov.io/gh/FullStack-Templates/Angular-template) for Code Coverage reports
+- [CodeCov](https://app.codacy.com/gh/FullStack-Templates/Angular-template/dashboard?utm_source=github.com&utm_medium=referral&utm_content=FullStack-Templates/Angular-template&utm_campaign=Badge_Grade) for Code quality reports
 
 ## Project Documentation:
 - Detailed documenation is available [here](https://www.todaystechnology.org/post/part-1-a-responsive-angular-app-with-openid-connect)
