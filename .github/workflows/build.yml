@@ -62,13 +62,20 @@ jobs:
         key: node-modules-${{ hashFiles('package-lock.json') }}
 
     - name: Install Dependencies
-      if: steps.node-cache.outputs.cache-hit != 'true'
+      #if: steps.node-cache.outputs.cache-hit != 'true'
       run: |
         npm install
         
-    - name: Use Node.js ${{matrix.node-version}}
-      uses: actions/setup-node@v1
+    - name: Cypress run
+      uses: cypress-io/github-action@v2
       with:
-       node-version: ${{matrix.node-version}}
-    - run: |
-        npm run build
+        #build: npm run build
+        start: npm start
+        project: ./e2e
+        record: true
+        #cache-key: node-modules-${{ hashFiles('package-lock.json') }}
+      env:
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # pass GitHub token to allow accurately detecting a build vs a re-run build
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
