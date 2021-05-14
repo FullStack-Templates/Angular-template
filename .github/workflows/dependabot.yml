@@ -13,10 +13,15 @@ jobs:
       with:
         github-token: "${{ secrets.DEPENDABOT_TOKEN }}"
 
-  auto-merge:
+  merge-me:
+    if: ${{ github.event.pull_request.sender == 'dependabot[bot]' }}
+    name: Merge me!
     needs: dependabot-approval
     runs-on: ubuntu-latest
-    steps:
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+     steps:
+      - name: Merge me!
+        uses: ridedott/merge-me-action@master
         with:
-          github-token: "${{ secrets.DEPENDABOT_TOKEN }}"
+          GITHUB_TOKEN: ${{ secrets.DOTTBOTT_TOKEN }}
+    timeout-minutes: 5
+
