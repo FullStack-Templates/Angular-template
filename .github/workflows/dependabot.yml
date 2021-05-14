@@ -18,10 +18,10 @@ jobs:
     name: Merge me!
     needs: dependabot-approval
     runs-on: ubuntu-latest
-     steps:
-      - name: Merge me!
-        uses: ridedott/merge-me-action@master
-        with:
-          GITHUB_TOKEN: ${{ secrets.DOTTBOTT_TOKEN }}
-    timeout-minutes: 5
+    steps:
+    - name: Merge me!
+      uses: ridedott/merge-me-action@master
+      with:
+        GITHUB_TOKEN: ${{ secrets.DOTTBOTT_TOKEN }}
+      timeout-minutes: 5
 
