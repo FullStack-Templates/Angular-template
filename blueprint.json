@@ -1,0 +1,46 @@
+{
+  "ids": {
+    "npm": "@appnest/readme"
+  },
+  "logo": {
+    "src": "https://github.com/FullStack-Templates/Angular-template/blob/master/docs/assets/images/AngularOidcTemplateLogo.png",
+    "width": "150"
+  },
+  "badges": [
+    {
+      "alt": "Build",
+      "url": "https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml",
+      "img": "https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml/badge.svg"
+    },
+    {
+      "alt": "Cypress Dashboard",
+      "url": "https://dashboard.cypress.io/projects/tbbs2j/runs",
+      "img": "https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/tbbs2j/master&logo=cypress"
+    },
+    {
+      "alt": "codecov",
+      "url": "https://codecov.io/gh/FullStack-Templates/Angular-template",
+      "img": "https://codecov.io/gh/FullStack-Templates/Angular-template/branch/master/graph/badge.svg?token=VG4HFY1PJW"
+    },
+    {
+      "alt": "Codacy Badge",
+      "url": "https://www.codacy.com/gh/FullStack-Templates/Angular-template/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=FullStack-Templates/Angular-template&amp;utm_campaign=Badge_Grade",
+      "img": "https://app.codacy.com/project/badge/Grade/38bb383c244749dab8aebf3601c52e3d"
+    },
+    {
+      "alt": "Dependencies Status",
+      "url": "https://david-dm.org/FullStack-Templates/Angular-template",
+      "img": "https://david-dm.org/FullStack-Templates/Angular-template.svg"
+    },
+    {
+      "alt": "DeployAngular",
+      "url": "https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml",
+      "img": "https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml/badge.svg"
+    },
+    {
+      "alt": "Netlify Status",
+      "url": "https://app.netlify.com/sites/my-angular-template/deploys",
+      "img": "https://api.netlify.com/api/v1/badges/52a905ed-204f-418c-a913-24453ee2bd83/deploy-status"
+    }
+  ]
+}
