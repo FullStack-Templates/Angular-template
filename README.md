@@ -5,9 +5,7 @@
 <h1 align="center">angular-oidc-template</h1>
 
 <p align="center">
-		<a href="https://npmcharts.com/compare/@appnest/readme?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@appnest/readme.svg" height="20"/></a>
-<a href="https://www.npmjs.com/package/@appnest/readme"><img alt="NPM Version" src="https://img.shields.io/npm/v/@appnest/readme.svg" height="20"/></a>
-<a href="https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml"><img alt="Build" src="https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml/badge.svg" height="20"/></a>
+		<a href="https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml"><img alt="Build" src="https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml/badge.svg" height="20"/></a>
 <a href="https://dashboard.cypress.io/projects/tbbs2j/runs"><img alt="Cypress Dashboard" src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/tbbs2j/master&logo=cypress" height="20"/></a>
 <a href="https://codecov.io/gh/FullStack-Templates/Angular-template"><img alt="codecov" src="https://codecov.io/gh/FullStack-Templates/Angular-template/branch/master/graph/badge.svg?token=VG4HFY1PJW" height="20"/></a>
 <a href="https://www.codacy.com/gh/FullStack-Templates/Angular-template/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=FullStack-Templates/Angular-template&amp;utm_campaign=Badge_Grade"><img alt="Codacy Badge" src="https://app.codacy.com/project/badge/Grade/38bb383c244749dab8aebf3601c52e3d" height="20"/></a>
@@ -96,6 +94,13 @@ Open up the browser to http://127.0.0.1:4200 to view the application
 ## ➤ Deploy the application
 
 Deployment recommendations for this application are available [here](https://github.com/FullStack-Templates/Angular-template/wiki)
+
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#setup-documentation)
+
+## ➤ Setup documentation
+
+To setup your README (auto-generate), dependency management reports, code coverage reports please [Customize your template](https://github.com/FullStack-Templates/Angular-template/wiki)
 
 
 
