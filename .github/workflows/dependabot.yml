@@ -22,6 +22,6 @@ jobs:
     - name: Merge me!
       uses: ridedott/merge-me-action@master
       with:
-        GITHUB_TOKEN: ${{ secrets.DOTTBOTT_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.DEPENDABOT_TOKEN  }}
       timeout-minutes: 5
 
