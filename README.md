@@ -42,6 +42,14 @@ The tech stack used are:
 - [CodeCov](https://app.codacy.com/gh/FullStack-Templates/Angular-template/dashboard?utm_source=github.com&utm_medium=referral&utm_content=FullStack-Templates/Angular-template&utm_campaign=Badge_Grade) for Code quality reports
 
 
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#use-this-template)
+
+## ➤ Use This Template
+To create a GitHub repository using this template, click the **Use this template** button as shown below
+
+![](./docs/assets/images/UseThisTemplate.png)
+
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#project-documentation)
 
 ## ➤ Project Documentation:
@@ -54,6 +62,7 @@ The tech stack used are:
 Landing Page           |  Auth0 Login |  Home Page
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](./docs/assets/images/Angular-test-login.png)  |  ![](./docs/assets/images/Auth0-login.png) | ![](./docs/assets/images/Angular-test-after-login.png)
+
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#project-dependencies)
 
