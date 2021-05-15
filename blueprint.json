@@ -1,7 +1,4 @@
 {
-  "ids": {
-    "npm": "@appnest/readme"
-  },
   "logo": {
     "src": "https://github.com/FullStack-Templates/Angular-template/blob/master/docs/assets/images/AngularOidcTemplateLogo.png",
     "width": "150"

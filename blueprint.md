@@ -63,6 +63,10 @@ Open up the browser to http://127.0.0.1:4200 to view the application
 
 Deployment recommendations for this application are available [here](https://github.com/FullStack-Templates/Angular-template/wiki)
 
+## Setup documentation
+
+To setup your README (auto-generate), dependency management reports, code coverage reports please [Customize your template](https://github.com/FullStack-Templates/Angular-template/wiki/Customize-template-documentation)
+
 
 
 
