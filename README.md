@@ -97,6 +97,8 @@ foo@bar:~$: npm run start
 
 Open up the browser to http://127.0.0.1:4200 to view the application
 
+> Please note that you may not be able to login until you complete  step 1 and step 2 in [Configuring Auth0](https://github.com/FullStack-Templates/Angular-template/wiki/Configure-Auth0) 
+
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#deploy-the-application)
 
