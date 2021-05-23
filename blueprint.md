@@ -21,8 +21,7 @@ The tech stack used are:
 ## CI/CD and metrics:
 - [GitHub Actions](https://github.com/FullStack-Templates/Angular-template/actions) for continuous integration and delivery to S3
 - [Cypress](https://dashboard.cypress.io/projects/tbbs2j/analytics/runs-over-time) for e2e tests
-- [Coveralls](https://app.codecov.io/gh/FullStack-Templates/Angular-template) for Code Coverage reports
-- [CodeCov](https://app.codacy.com/gh/FullStack-Templates/Angular-template/dashboard?utm_source=github.com&utm_medium=referral&utm_content=FullStack-Templates/Angular-template&utm_campaign=Badge_Grade) for Code quality reports
+- [SonarCloud](https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template) for quality gates and metrics
 
 ## Use This Template
 To create a GitHub repository using this template, click the **Use this template** button as shown below
@@ -30,11 +29,12 @@ To create a GitHub repository using this template, click the **Use this template
 ![](./docs/assets/images/UseThisTemplate.png)
 
 ## Project Documentation:
-- Detailed documenation is available [here](https://www.todaystechnology.org/post/part-1-a-responsive-angular-app-with-openid-connect)
+- Accompanying blog post is available [here](https://www.todaystechnology.org/post/part-1-a-responsive-angular-app-with-openid-connect)
 - Live preview available at: 
    - [GitHub Pages](https://fullstack-templates.github.io/Angular-template)
    - [S3 static website](http://my-angular-template.s3-website-us-east-1.amazonaws.com)
    - [Netify](https://my-angular-template.netlify.app)
+- Screenshots (see below)
 
 Landing Page           |  Auth0 Login |  Home Page
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -54,6 +54,7 @@ To build your application for the first time, run the following in your shell:
 ```console
 foo@bar:~$: npm install
 foo@bar:~$: npm run build
+foo@bar:~$: npm run test
 ```
 
 ## Run the application
@@ -71,7 +72,7 @@ Open up the browser to http://127.0.0.1:4200 to view the application
 
 Deployment recommendations for this application are available [here](https://github.com/FullStack-Templates/Angular-template/wiki)
 
-## Project Documentation
+## Project customization
 
 To customize the project's documentation, please see [Project Documentation And Metrics](https://github.com/FullStack-Templates/Angular-template/wiki/Project-Documentation-And-Metrics)
 

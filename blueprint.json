@@ -10,11 +10,6 @@
       "img": "https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml/badge.svg"
     },
     {
-      "alt": "Cypress Dashboard",
-      "url": "https://dashboard.cypress.io/projects/tbbs2j/runs",
-      "img": "https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/tbbs2j/master&logo=cypress"
-    },
-    {
       "alt": "Coverage",
       "url": "https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template",
       "img": "https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=coverage"
@@ -38,6 +33,16 @@
       "alt": "Vulnerabilities",
       "url": "https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template",
       "img": "https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=vulnerabilities"
+    },
+    {
+      "alt": "Cypress Dashboard",
+      "url": "https://dashboard.cypress.io/projects/tbbs2j/runs",
+      "img": "https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/tbbs2j/master&logo=cypress"
+    },
+    {
+      "alt": "Dependencies Status",
+      "url": "https://david-dm.org/FullStack-Templates/Angular-template",
+      "img": "https://david-dm.org/FullStack-Templates/Angular-template.svg"
     },
     {
       "alt": "DeployAngular",

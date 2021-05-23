@@ -6,12 +6,13 @@
 
 <p align="center">
 		<a href="https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml"><img alt="Build" src="https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml/badge.svg" height="20"/></a>
-<a href="https://dashboard.cypress.io/projects/tbbs2j/runs"><img alt="Cypress Dashboard" src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/tbbs2j/master&logo=cypress" height="20"/></a>
 <a href="https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template"><img alt="Coverage" src="https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=coverage" height="20"/></a>
 <a href="https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template"><img alt="Quality Gate Status" src="https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=alert_status" height="20"/></a>
 <a href="https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template"><img alt="Reliability Rating" src="https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=reliability_rating" height="20"/></a>
 <a href="https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template"><img alt="Security Rating" src="https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=security_rating" height="20"/></a>
 <a href="https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template"><img alt="Vulnerabilities" src="https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=vulnerabilities" height="20"/></a>
+<a href="https://dashboard.cypress.io/projects/tbbs2j/runs"><img alt="Cypress Dashboard" src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/tbbs2j/master&logo=cypress" height="20"/></a>
+<a href="https://david-dm.org/FullStack-Templates/Angular-template"><img alt="Dependencies Status" src="https://david-dm.org/FullStack-Templates/Angular-template.svg" height="20"/></a>
 <a href="https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml"><img alt="DeployAngular" src="https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/deploy.yml/badge.svg" height="20"/></a>
 <a href="https://app.netlify.com/sites/my-angular-template/deploys"><img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/52a905ed-204f-418c-a913-24453ee2bd83/deploy-status" height="20"/></a>
 	</p>
@@ -40,8 +41,7 @@ The tech stack used are:
 ## ➤ CI/CD and metrics:
 - [GitHub Actions](https://github.com/FullStack-Templates/Angular-template/actions) for continuous integration and delivery to S3
 - [Cypress](https://dashboard.cypress.io/projects/tbbs2j/analytics/runs-over-time) for e2e tests
-- [Coveralls](https://app.codecov.io/gh/FullStack-Templates/Angular-template) for Code Coverage reports
-- [CodeCov](https://app.codacy.com/gh/FullStack-Templates/Angular-template/dashboard?utm_source=github.com&utm_medium=referral&utm_content=FullStack-Templates/Angular-template&utm_campaign=Badge_Grade) for Code quality reports
+- [SonarCloud](https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template) for quality gates and metrics
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#use-this-template)
@@ -55,11 +55,12 @@ To create a GitHub repository using this template, click the **Use this template
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#project-documentation)
 
 ## ➤ Project Documentation:
-- Detailed documenation is available [here](https://www.todaystechnology.org/post/part-1-a-responsive-angular-app-with-openid-connect)
+- Accompanying blog post is available [here](https://www.todaystechnology.org/post/part-1-a-responsive-angular-app-with-openid-connect)
 - Live preview available at: 
    - [GitHub Pages](https://fullstack-templates.github.io/Angular-template)
    - [S3 static website](http://my-angular-template.s3-website-us-east-1.amazonaws.com)
    - [Netify](https://my-angular-template.netlify.app)
+- Screenshots (see below)
 
 Landing Page           |  Auth0 Login |  Home Page
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -85,6 +86,7 @@ To build your application for the first time, run the following in your shell:
 ```console
 foo@bar:~$: npm install
 foo@bar:~$: npm run build
+foo@bar:~$: npm run test
 ```
 
 
@@ -109,9 +111,9 @@ Open up the browser to http://127.0.0.1:4200 to view the application
 Deployment recommendations for this application are available [here](https://github.com/FullStack-Templates/Angular-template/wiki)
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#project-documentation)
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#project-customization)
 
-## ➤ Project Documentation
+## ➤ Project customization
 
 To customize the project's documentation, please see [Project Documentation And Metrics](https://github.com/FullStack-Templates/Angular-template/wiki/Project-Documentation-And-Metrics)
 
