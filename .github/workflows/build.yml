@@ -1,9 +1,12 @@
 name: 'BuildAndVerify'
 
 on:
-  push:
-    branches: [ feature/**, review/**,master ]
   pull_request:
+    branches: [ feature/**, review/**,master ]
+    paths-ignore:
+      - '**/README.md'
+      - '**/blueprint.json'
+      - '**/blueprint.md'
 
 jobs:
   test:
@@ -32,16 +35,6 @@ jobs:
     - run: |
         npm install
         npm run test
-    
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: CodeCov Action
-      uses: codecov/codecov-action@v1
-      with:
-       token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
     
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master

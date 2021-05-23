@@ -4,6 +4,10 @@ on:
   pull_request:
     types: [ closed ]
     branches: [ master]
+    paths-ignore:
+      - '**/README.md'
+      - '**/blueprint.json'
+      - '**/blueprint.md'
 
 jobs:
   build-and-upload:
