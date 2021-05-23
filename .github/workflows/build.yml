@@ -7,6 +7,12 @@ on:
       - '**/README.md'
       - '**/blueprint.json'
       - '**/blueprint.md'
+  push:
+    branches: [ feature/**, review/**,master ]
+    paths-ignore:
+      - '**/README.md'
+      - '**/blueprint.json'
+      - '**/blueprint.md'
 
 jobs:
   test:
