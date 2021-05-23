@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/dennischacko/Development/Angular-template/src/app/auth/auth-service.service.spec.ts">
+    <testCase name="AuthServiceService should be created" duration="199"/>
+    <testCase name="AuthServiceService Should logout" duration="46"/>
+    <testCase name="AuthServiceService Should login" duration="91"/>
+    <testCase name="AuthServiceService IsAuthenticated should return true" duration="56"/>
+    <testCase name="AuthServiceService IsAuthenticated should return false" duration="59"/>
+  </file>
+  <file path="/Users/dennischacko/Development/Angular-template/src/app/auth/auth-guard.guard.spec.ts">
+    <testCase name="CanActivateGuardService expect authguard to instantiate" duration="464"/>
+    <testCase name="CanActivateGuardService expect authguard can activate to be true" duration="320"/>
+    <testCase name="CanActivateGuardService expect authguard can activate to be false" duration="202"/>
+  </file>
+  <file path="/Users/dennischacko/Development/Angular-template/src/app/header/header.component.spec.ts">
+    <testCase name="HeaderComponent should create" duration="449"/>
+    <testCase name="HeaderComponent should login" duration="299"/>
+    <testCase name="HeaderComponent should logout" duration="237"/>
+  </file>
+  <file path="/Users/dennischacko/Development/Angular-template/src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="127"/>
+    <testCase name="AppComponent should have as title &apos;angular-oidc-app&apos;" duration="73"/>
+  </file>
+  <file path="/Users/dennischacko/Development/Angular-template/src/app/landing/landing.component.spec.ts">
+    <testCase name="LandingComponent should create" duration="64"/>
+  </file>
+  <file path="/Users/dennischacko/Development/Angular-template/src/app/footer/footer.component.spec.ts">
+    <testCase name="FooterComponent should create" duration="110"/>
+  </file>
+  <file path="/Users/dennischacko/Development/Angular-template/src/app/home/home.component.spec.ts">
+    <testCase name="HomeComponent should create" duration="153"/>
+  </file>
+</testExecutions>
