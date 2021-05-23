@@ -34,12 +34,11 @@ export class AuthGuard implements CanActivate {
     | boolean
     | UrlTree {
     if (this.authService.isAuthenticated()) {
-      const activated: Observable<boolean> = new Observable<boolean>(
+      return new Observable<boolean>(
         subscriber => {
           subscriber.next(true);
         }
       );
-      return activated;
     } else {
       console.log('Authguard is not authenticated');
       this.authService.login();
