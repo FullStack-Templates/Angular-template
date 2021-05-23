@@ -1,8 +1,9 @@
-name: 'Builds'
+name: 'BuildAndVerify'
 
 on:
   push:
     branches: [ feature/**, review/**,master ]
+  pull_request:
 
 jobs:
   test:

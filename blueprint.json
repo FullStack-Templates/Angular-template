@@ -15,19 +15,29 @@
       "img": "https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/tbbs2j/master&logo=cypress"
     },
     {
-      "alt": "codecov",
-      "url": "https://codecov.io/gh/FullStack-Templates/Angular-template",
-      "img": "https://codecov.io/gh/FullStack-Templates/Angular-template/branch/master/graph/badge.svg?token=VG4HFY1PJW"
+      "alt": "Coverage",
+      "url": "https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template",
+      "img": "https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=coverage"
     },
     {
-      "alt": "Codacy Badge",
-      "url": "https://www.codacy.com/gh/FullStack-Templates/Angular-template/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=FullStack-Templates/Angular-template&amp;utm_campaign=Badge_Grade",
-      "img": "https://app.codacy.com/project/badge/Grade/38bb383c244749dab8aebf3601c52e3d"
+      "alt": "Quality Gate Status",
+      "url": "https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template",
+      "img": "https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=alert_status"
     },
     {
-      "alt": "Dependencies Status",
-      "url": "https://david-dm.org/FullStack-Templates/Angular-template",
-      "img": "https://david-dm.org/FullStack-Templates/Angular-template.svg"
+      "alt": "Reliability Rating",
+      "url": "https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template",
+      "img": "https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=reliability_rating"
+    },
+    {
+      "alt": "Security Rating",
+      "url": "https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template",
+      "img": "https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=security_rating"
+    },
+    {
+      "alt": "Vulnerabilities",
+      "url": "https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template",
+      "img": "https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=vulnerabilities"
     },
     {
       "alt": "DeployAngular",

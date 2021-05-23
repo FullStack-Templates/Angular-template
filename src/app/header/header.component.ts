@@ -24,7 +24,9 @@ export class HeaderComponent implements OnInit {
   /**
    *
    */
-  ngOnInit() {}
+  ngOnInit() {
+    // do nothing
+  }
 
   /**
    *

@@ -51,7 +51,6 @@ export class AuthService {
       .then((result: boolean) => {
         console.log('result is ' + result);
         this.authenticationEventObservable.next(result);
-        //this.router.navigateByUrl('home');
       })
       .catch(error => {
         console.error('Authentication error: ' + error);
