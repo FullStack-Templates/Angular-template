@@ -1,11 +1,10 @@
 name: "Dependabot"
 
 on:
-  workflow_run:
-    types:
-      - completed
-    workflows:
-      - 'BuildAndVerify'
+  pull_request:
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
   
 jobs:
   dependabot-approval:
@@ -18,7 +17,7 @@ jobs:
         github-token: "${{ secrets.DEPENDABOT_TOKEN }}"
 
   merge-me:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }} 
+    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     name: Merge me!
     needs: dependabot-approval
     runs-on: ubuntu-latest
