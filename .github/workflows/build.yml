@@ -39,7 +39,7 @@ jobs:
       with:
        node-version: ${{matrix.node-version}}
     - run: |
-        npm install -g npq  --ignore-scripts
+        npm install -npq  --ignore-scripts
         npq install
         npm run test
     
@@ -70,7 +70,7 @@ jobs:
         key: node-modules-${{ hashFiles('package-lock.json') }}
 
     - name: Install Dependencies
-      #if: steps.node-cache.outputs.cache-hit != 'true'
+      if: steps.node-cache.outputs.cache-hit != 'true'
       run: |
         npm install npq  --ignore-scripts
         npq install
