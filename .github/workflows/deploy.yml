@@ -22,7 +22,8 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        npm install
+        npm install -g npq  --ignore-scripts
+        npq install
         
     - name: Use Node.js ${{matrix.node-version}}
       uses: actions/setup-node@v1
