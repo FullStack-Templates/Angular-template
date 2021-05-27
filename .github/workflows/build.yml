@@ -39,7 +39,7 @@ jobs:
       with:
        node-version: ${{matrix.node-version}}
     - run: |
-        npm install -npq  --ignore-scripts
+        npm install -g npq  --ignore-scripts
         npq install
         npm run test
     
@@ -72,7 +72,7 @@ jobs:
     - name: Install Dependencies
       if: steps.node-cache.outputs.cache-hit != 'true'
       run: |
-        npm install npq  --ignore-scripts
+        npm install -g npq  --ignore-scripts
         npq install
         
     - name: Cypress run
