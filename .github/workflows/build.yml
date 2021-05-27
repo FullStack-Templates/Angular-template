@@ -72,7 +72,7 @@ jobs:
     - name: Install Dependencies
       #if: steps.node-cache.outputs.cache-hit != 'true'
       run: |
-        npm install -g npq  --ignore-scripts
+        npm install npq  --ignore-scripts
         npq install
         
     - name: Cypress run
