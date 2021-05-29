@@ -6,6 +6,11 @@ on:
       - '**/README.md'
       - '**/blueprint.json'
       - '**/blueprint.md'
+  push:
+    paths-ignore:
+      - '**/README.md'
+      - '**/blueprint.json'
+      - '**/blueprint.md'
 
 jobs:
   test:
