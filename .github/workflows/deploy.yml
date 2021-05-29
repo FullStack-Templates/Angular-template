@@ -1,13 +1,11 @@
 name: 'Deployments'
 
 on:
-  pull_request:
-    types: [ closed ]
-    branches: [ master]
-    paths-ignore:
-      - '**/README.md'
-      - '**/blueprint.json'
-      - '**/blueprint.md'
+  workflow_run:
+    workflows: [ "Execute Quality Gate"]
+    branches: [master]
+    types:
+      - completed
 
 jobs:
   build-and-upload:
@@ -17,6 +15,8 @@ jobs:
       matrix:
          node-version: [14.15]
 
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    
     steps:
     - uses: actions/checkout@v2
 

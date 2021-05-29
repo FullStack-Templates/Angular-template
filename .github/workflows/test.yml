@@ -1,0 +1,37 @@
+name: 'Execute unit tests'
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**/README.md'
+      - '**/blueprint.json'
+      - '**/blueprint.md'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.15]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Cache Node modules
+      id: node-Cache
+      uses: actions/cache@v2
+      with:
+        path: |
+          **/node_modules
+        key: node-modules-${{ hashFiles('package-lock.json') }}
+
+
+    - name: Use Node.js ${{matrix.node-version}}
+      uses: actions/setup-node@v1
+      with:
+       node-version: ${{matrix.node-version}}
+    - run: |
+        npm install -g npq  --ignore-scripts
+        npq install
+        npm run test
