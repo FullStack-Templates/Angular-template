@@ -1,4 +1,4 @@
-name: 'BuildAndVerify'
+name: 'Run Tests'
 
 on:
   pull_request:
@@ -20,7 +20,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.15]
+        os: [macos-latest, windows-latest, ubuntu-latest]
+        node-version: [12, 14]
 
     steps:
     - uses: actions/checkout@v2
@@ -49,32 +50,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-
-  build:
-    needs: test
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-         node-version: [14.15]
-
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Cache Node modules
-      id: node-Cache
-      uses: actions/cache@v2
-      with:
-        path: |
-          **/node_modules
-        key: node-modules-${{ hashFiles('package-lock.json') }}
-
-    - name: Install Dependencies
-      if: steps.node-cache.outputs.cache-hit != 'true'
-      run: |
-        npm install -g npq  --ignore-scripts
-        npq install
-        
     - name: Cypress run
       uses: cypress-io/github-action@v2
       with:
@@ -83,7 +58,7 @@ jobs:
         project: ./e2e
         record: true
         wait-on: 'http://localhost:4200'
-        wait-on-timeout: 240
+        wait-on-timeout: 500
         #cache-key: node-modules-${{ hashFiles('package-lock.json') }}
       env:
           # pass the Dashboard record key as an environment variable
