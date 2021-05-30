@@ -45,6 +45,8 @@ jobs:
         npm run test
     
     - name: SonarCloud Scan
+      # Skip sonarcloud scan for dependabot for now
+      if: github.actor != 'dependabot[bot]' || github.actor != 'dependabot-preview[bot]'
       uses: SonarSource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
