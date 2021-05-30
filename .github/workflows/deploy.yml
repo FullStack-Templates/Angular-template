@@ -1,18 +1,17 @@
 name: 'Deployments'
 
 on:
-  pull_request:
-    types: [ closed ]
+  workflow_run:
+    workflows: ["Run Tests"]
     branches: [ master]
-    paths-ignore:
-      - '**/README.md'
-      - '**/blueprint.json'
-      - '**/blueprint.md'
+    types: 
+      - completed
 
 jobs:
   build-and-upload:
-    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
+    runs-on: ubuntu-latest
     strategy:
       matrix:
          node-version: [14.15]
