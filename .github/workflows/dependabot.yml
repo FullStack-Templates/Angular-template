@@ -1,15 +1,18 @@
 name: "Dependabot"
 
 on:
-  pull_request:
-    paths:
-      - 'package.json'
-      - 'package-lock.json'
+  workflow_run:
+    types:
+      - completed
+    workflows: ["Run Tests"]
   
 jobs:
   dependabot-approval:
+    
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+    if: > 
+      (github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]') && 
+      ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
     - uses: hmarr/auto-approve-action@v2
       if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'

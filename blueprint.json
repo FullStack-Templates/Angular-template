@@ -6,8 +6,8 @@
   "badges": [
     {
       "alt": "Build",
-      "url": "https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml",
-      "img": "https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml/badge.svg"
+      "url": "https://github.com/FullStack-Templates/Angular-template/actions/workflows/test.yml",
+      "img": "https://github.com/FullStack-Templates/Angular-template/actions/workflows/test.yml/badge.svg"
     },
     {
       "alt": "Coverage",

@@ -5,7 +5,7 @@
 <h1 align="center">angular-oidc-template</h1>
 
 <p align="center">
-		<a href="https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml"><img alt="Build" src="https://github.com/Web-Tech-Projects/Angular-template/actions/workflows/build.yml/badge.svg" height="20"/></a>
+		<a href="https://github.com/FullStack-Templates/Angular-template/actions/workflows/test.yml"><img alt="Build" src="https://github.com/FullStack-Templates/Angular-template/actions/workflows/test.yml/badge.svg" height="20"/></a>
 <a href="https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template"><img alt="Coverage" src="https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=coverage" height="20"/></a>
 <a href="https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template"><img alt="Quality Gate Status" src="https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=alert_status" height="20"/></a>
 <a href="https://sonarcloud.io/dashboard?id=FullStack-Templates_Angular-template"><img alt="Reliability Rating" src="https://sonarcloud.io/api/project_badges/measure?project=FullStack-Templates_Angular-template&metric=reliability_rating" height="20"/></a>
